@@ -22,17 +22,17 @@ ol,
 li,
 blockquote {
   margin: 0;
-  padding: 0;
+  padding: 0; /*Обнуление отступов*/
 }
 
 a {
-  color: inherit;
+  color: inherit; /*Наследовали цвет родителя*/
 }
 
 img {
-  width: 100%;
+  width: 100%; /*Масштаб картинок под ширину контейнера*/
 }
 
 button {
-  font: inherit;
+  font: inherit; /*Наследовали шрифт от страницы*/
 }

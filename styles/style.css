@@ -1,1 +1,339 @@
-/* место для вашего кода */
+/* Заголовок */
+.header {
+  display: grid; /* Превращает элемент в контейнер - создает сетку и делает дочерние элементы ее ячейками*/
+  grid-template-columns: 1fr min-content 1fr; /* Структура колонок - доспуное место слева,размер столбца зависит от наибольшего элемента в нем, свободное место слева*/
+  align-items: center; /*Выравнивание дочерних элементов по центру*/
+  padding: 88px 50px; /*Внутренние отступы верх/низ и лево/право*/
+}
+
+/* Меню навигации */
+.header__menu {
+  justify-self: start; /*Выравнивание элемента внутри сетки ячейки слева*/
+}
+
+/* Список навигации*/
+.header__links-list {
+  display: flex; /*Флексбокс - расположение элемента списка в одну строку */
+  gap: 32px; /*Отсуп между списком*/
+  list-style: circle; /*Маркер списка*/
+  margin-top: -7px; /*Внешнйи отступ сверху*/
+}
+
+/* Ссылки навигации */
+.header__link {
+  font-size: 18px; /*Размер шрифта*/
+  text-underline-offset: 4px; /*Отступ подчеркивания*/
+}
+
+/* Активная ссылка */
+.header__link_active {
+  text-decoration: none; /*Убирается подчеркивание с актиной ссылки*/
+  list-style: none; /*Убирает маркер*/
+}
+
+/* Логотип */
+.header__logo {
+  justify-self: center; /*Выравнивание внутри его ячейки сетки (вторая колонка)*/
+  width: 145px; /*Ширина блока*/
+  padding: 4px; /*Внутренний отступ*/
+}
+
+/* Адреса в заголовке */
+.header__address {
+  justify-self: end; /*Выравнивание по центру с прижиманием к правому краю*/
+  max-width: 220px; /*Макс высота*/
+  font-size: 18px; /*Рзамер шрифта*/
+  line-height: 1.35; /*Высота строки (интервал между строк?)*/
+  text-underline-offset: 4px; /*Смещение подчеркивания*/
+  margin-right: 20px; /*Внешний отступ справа*/
+  margin-bottom: 4px; /*Внешний отступ снизу*/
+  font-style: normal; /*Обычный стиль шрифта (не курсив не неклонн)*/
+  width: 240px; /*Ширина*/
+}
+
+/*Главный баннер*/
+.cover {
+  position: relative; /*можно сместить относительно своего исходного положения, другие элементы его "видят"*/
+  padding: 165px 50px 50px; /*Внутренние отступы сверху, справа и слева, снизу*/
+  background: url("../images/cover.jpg") center/cover no-repeat; /*Фон, по центру, заполнить блок, запрет повтора*/
+}
+
+/*Лоты*/
+.lots {
+  padding: 177px 24px 1px; /*Внутренние отспуы сверху, справа и слева, снизу*/
+}
+
+/*Инфа об аукционе*/
+.about {
+  display: grid; /* Превращает элемент в контейнер - создает сетку и делает дочерние элементы ее ячейками*/
+  grid-template-columns: 1fr 2fr; /*Колонки: доступное место слева и справа в 2 раза больше*/
+  gap: 2px; /*Отсуп между колонками */
+  padding: 154px 14px; /*Внутреннйи отступ сверху и снизу, справа и слева*/
+}
+
+/*Инфа снизу*/
+.footer {
+  display: grid; /*Контейнер с колонками*/
+  grid-template-columns: 1fr 1fr 1fr; /*Колонки*/
+  padding: 27px 50px 90px; /*Внутренни отсуп сверху, по бокам, снизу*/
+}
+
+/*Затемнение фона*/
+.overlay {
+  position: absolute; /*Позиционирование элемента, другие элементы занимают его позицию, как будто его там и не было.*/
+  inset: 0; /*одновременное смещение  элемента со всех четырёх сторон*/
+  background: rgba(0, 0, 0, 0.6); /*Цвет фона*/
+  z-index: 1; /*Порядок слоя*/
+}
+
+/*Текст в баннере*/
+.cover__title {
+  position: relative; 
+  z-index: 2; /*Порядок слоя*/
+  display: flex; /*Дисплей флекс - расположение объектов в строку*/
+  flex-direction: column; /*Расположение дочерних элементов в колонку*/
+  gap: 6px; /*Промежуток между словами*/
+  color: #fff; /*Цвет текста*/
+  font-weight: bold; /*Жирный цвет*/
+  font-size: 100px; /*Размер шрифта*/
+  line-height: 1.15; /*Интервал между строк?*/
+  text-transform: uppercase; /*Верхний регистр*/
+}
+
+/*ОНО*/
+.aligned-text_left {
+  display: block; /*Меняет на блочный элемент, позволяет каждое слово начинать с новой строки*/
+  letter-spacing: 0.3em; /*Интервал между буквами*/
+}
+
+/*ТЕБЕ*/
+.aligned-text_center {
+  display: block;
+  letter-spacing: 0.3em;
+  text-align: center; /*Текс по центру внутри своего блока*/
+  margin-right: -30px; /*Внешний отступ справа*/
+  margin-top: 14px; /*Внешний отступ сверху*/
+}
+
+/*НАДО*/
+.aligned-text_right {
+  display: block;
+  letter-spacing: 0.3em;
+  text-align: right;
+  margin-top: 15px;
+  justify-content: end;
+  margin-right: -30px;
+}
+
+.letter-spacing-extended {
+  letter-spacing: 0.6em; /*Межбуквенный интервал*/
+}
+
+.no-letter-spacing {
+  letter-spacing: 0;
+}
+
+/* Описание обложки (текст + кнопка)*/
+.cover__description {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: end; /*Выравнивает флекс элементы по горизонтали к правой части.*/
+  align-items: center; /*Выравнивание флекс элементы по вертикали по центру*/
+  gap: 102px; /*Отступ между флекс элементами*/
+  margin-top: 105px; /*Оттуп сверху*/
+}
+
+/*Инфа об аукционе*/
+.cover__description-text {
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.27; /*Интервал между строк или высота строки*/
+  text-transform: uppercase; 
+  word-spacing: 18px; /*Отступ между словами*/
+  margin-right: 6px; /*Внешний отсуп справа*/
+}
+
+/* Кнопка ставки */
+.bet-button {
+  border: 1px solid #fff; /*Обводка*/
+  padding: 12px 32px;
+  color: #fff;
+  font-size: 22px;
+  text-transform: uppercase;
+  background: transparent; /*Прозрачнй фон*/
+  cursor: pointer; /*Меняет курсор с стрелки на указатель*/
+}
+
+/*Заголовок лотов*/
+.lots__heading {
+  margin-bottom: 28px;
+  padding-left: 40px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+/*Карточки лотов*/
+.lots__card-list {
+  display: flex;
+  flex-wrap: nowrap; /*Запрет перенос флекс элементов на новую строку*/
+  gap: 25px;
+  list-style: none; /*Убирает маркеры списка*/
+  margin-bottom: 30px;
+  justify-content: space-between; /*Распределяет свободное пространство по горизонтали между карточками*/
+  align-items: stretch; /*Растягивает все карточки по вертикали на одинаковую высоту (равную высоте самой высокой карточки)*/
+}
+
+/*Сами карточки*/
+.lots__card-list-item {
+  flex: 1; /*Сокращение для: flex-grow: 1; flex-shrink: 1; flex-basis: 0%; - Позвоялет растягиватсья элементу, чтобы заполнить все пространство в контейнере*/
+  min-width: 0; /*Позволяет элементу сновится уже, чем его контент*/
+  width: auto; /*Автоматическая ширина*/
+  min-height: 450px; /*Минимальная высота для карточек*/
+}
+
+/*Карточка*/
+.card-link {
+  display: block; /*Блочный элемент - занять всю ширину и высоту родителя*/
+  height: 100%; /*Вся высота родителя*/
+  text-decoration: none; /*Убирает подчеркивание*/
+}
+
+/* Общие стили карточек */
+.card {
+  position: relative; /*Можно позиционировать относительно своего исходного места*/
+  display: flex; 
+  flex-direction: column; /*Дочерние элементы в колонну*/
+  justify-content: space-between; /*Распределенеи свободного пространства внутри карточек (Заголовок к верху, текст к низу)*/
+  height: 100%; 
+  padding: 48px 40px 82px;
+  color: #fff;
+  background: center/cover no-repeat; /*Фон: по центру, заполнить блок, запрет повтора*/
+}
+
+/* Фоны карточек */
+.card_type_film {
+  background-image: url("../images/card-lot-01.jpg"); /*Фоновое изображение*/
+}
+
+.card_type_book {
+  background-image: url("../images/card-lot-02.jpg");
+}
+
+.card_type_picture {
+  background-image: url("../images/card-lot-03.jpg");
+}
+
+/*Заголовок лота*/
+.card__title {
+  position: relative;
+  z-index: 2;
+  font-size: 22px;
+  line-height: 1.2;
+  text-decoration: underline; /*Подчеркивание*/
+  text-transform: uppercase;
+}
+
+/*Текст лота*/
+.card__text {
+  position: relative;
+  z-index: 2;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-top: 36px;
+  margin-bottom: -36px;
+}
+
+/*Больше лотов*/
+.lots__look-more-link {
+  margin-left: 40px;
+  font-size: 20px;
+  text-underline-offset: 5px; /*Смещение подчеркивания*/
+}
+
+/*Общие стили для обоих колонок*/
+.about__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*Выравнивание дочерних элементов по горизонтали по центру*/
+  padding: 0px 10px;
+  margin-right: 5px;
+}
+
+/*Логотип*/
+.about__logo {
+  display: flex; /*Чтобы центрировать логотип внутри кргуа*/
+  justify-content: center; 
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%; /*Скгугляем углы элемента*/
+  background: #000; /*Заливка круга*/
+}
+
+/*Логотип (фото)*/
+.about__logo-image {
+  width: 148px;
+}
+
+/*Заголовок Об аукционе*/
+.about__title {
+  margin: 100px 0; /*Отсуп сверху и снизу*/
+  font-size: 40px;
+  text-transform: uppercase;
+  align-self: flex-start; /*Чтобы заголовок был выровнен по левому краю, а не по центру колонки*/
+}
+
+/*Текст*/
+.about__text {
+  display: flex;
+  flex-direction: column; /*Абзацы вертикально*/
+  gap: 25px;
+  font-size: 20px;
+  line-height: 1.2; /*Интервал между строк */
+  padding: 1px 0px 0px 0px;
+}
+
+/* Навигация снизу*/
+.footer__menu {
+  justify-self: center;
+}
+
+/*Список меню*/
+.footer__menu-list {
+  list-style: none; /*Убрать маркеры*/
+  text-align: center; /*Текст по центру*/
+}
+
+/*Ссылки в меню*/
+.footer__menu-link {
+  font-size: 18px;
+  text-underline-offset: 4px;
+}
+
+/*Активная ссылка*/
+.footer__menu-link_active {
+  text-decoration: none; /*Убрать подчекнивание с активной ссылки*/
+}
+
+/*Колонка иконок соц сетей*/
+.footer__social-list {
+  justify-self: end;
+  display: flex;
+  gap: 48px;
+  list-style: none;
+}
+
+/*Иконки соц сетей*/
+.footer__social-icon {
+  width: 48px;
+}
+
+/*Адреса*/
+.address {
+  max-width: 240px;
+  font-size: 18px;
+  line-height: 1.35;
+  text-underline-offset: 4px;
+  font-style: normal;
+}
