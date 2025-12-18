@@ -1,117 +1,118 @@
 /* Заголовок */
 .header {
-  display: grid; /* Превращает элемент в контейнер - создает сетку и делает дочерние элементы ее ячейками*/
-  grid-template-columns: 1fr min-content 1fr; /* Структура колонок - доспуное место слева,размер столбца зависит от наибольшего элемента в нем, свободное место слева*/
-  align-items: center; /*Выравнивание дочерних элементов по центру*/
-  padding: 88px 50px; /*Внутренние отступы верх/низ и лево/право*/
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  padding: 88px 50px;
 }
 
 /* Меню навигации */
 .header__menu {
-  justify-self: start; /*Выравнивание элемента внутри сетки ячейки слева*/
+  justify-self: start;
 }
 
 /* Список навигации*/
 .header__links-list {
-  display: flex; /*Флексбокс - расположение элемента списка в одну строку */
-  gap: 32px; /*Отсуп между списком*/
-  list-style: circle; /*Маркер списка*/
-  margin-top: -7px; /*Внешнйи отступ сверху*/
+  display: flex;
+  gap: 32px;
+  list-style: circle;
+  margin-top: -7px;
 }
 
 /* Ссылки навигации */
 .header__link {
-  font-size: 18px; /*Размер шрифта*/
-  text-underline-offset: 4px; /*Отступ подчеркивания*/
+  font-size: 18px;
+  text-underline-offset: 4px;
 }
 
 /* Активная ссылка */
 .header__link_active {
-  text-decoration: none; /*Убирается подчеркивание с актиной ссылки*/
-  list-style: none; /*Убирает маркер*/
+  text-decoration: none;
+  list-style: none;
 }
 
 /* Логотип */
 .header__logo {
-  justify-self: center; /*Выравнивание внутри его ячейки сетки (вторая колонка)*/
-  width: 145px; /*Ширина блока*/
-  padding: 4px; /*Внутренний отступ*/
+  justify-self: center;
+  width: 145px;
+  padding: 4px;
 }
 
 /* Адреса в заголовке */
 .header__address {
-  justify-self: end; /*Выравнивание по центру с прижиманием к правому краю*/
-  max-width: 220px; /*Макс высота*/
-  font-size: 18px; /*Рзамер шрифта*/
-  line-height: 1.35; /*Высота строки (интервал между строк?)*/
-  text-underline-offset: 4px; /*Смещение подчеркивания*/
-  margin-right: 20px; /*Внешний отступ справа*/
-  margin-bottom: 4px; /*Внешний отступ снизу*/
-  font-style: normal; /*Обычный стиль шрифта (не курсив не неклонн)*/
-  width: 240px; /*Ширина*/
+  justify-self: end;
+  max-width: 220px;
+  font-size: 18px;
+  line-height: 1.35;
+  text-underline-offset: 4px;
+  margin-right: 20px;
+  margin-bottom: 4px;
+  font-style: normal;
+  width: 240px;
 }
 
 /*Главный баннер*/
 .cover {
-  position: relative; /*можно сместить относительно своего исходного положения, другие элементы его "видят"*/
-  padding: 165px 50px 50px; /*Внутренние отступы сверху, справа и слева, снизу*/
-  background: url("../images/cover.jpg") center/cover no-repeat; /*Фон, по центру, заполнить блок, запрет повтора*/
+  position: relative;
+  padding: 165px 50px 50px;
+  background: url("../images/cover.jpg") center/cover no-repeat;
 }
 
 /*Лоты*/
 .lots {
-  padding: 177px 24px 1px; /*Внутренние отспуы сверху, справа и слева, снизу*/
+  padding: 177px 24px 1px;
 }
 
 /*Инфа об аукционе*/
 .about {
-  display: grid; /* Превращает элемент в контейнер - создает сетку и делает дочерние элементы ее ячейками*/
-  grid-template-columns: 1fr 2fr; /*Колонки: доступное место слева и справа в 2 раза больше*/
-  gap: 2px; /*Отсуп между колонками */
-  padding: 154px 14px; /*Внутреннйи отступ сверху и снизу, справа и слева*/
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2px;
+  padding: 154px 14px;
 }
 
 /*Инфа снизу*/
 .footer {
-  display: grid; /*Контейнер с колонками*/
-  grid-template-columns: 1fr 1fr 1fr; /*Колонки*/
-  padding: 27px 50px 90px; /*Внутренни отсуп сверху, по бокам, снизу*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 27px 50px 90px;
 }
 
 /*Затемнение фона*/
 .overlay {
-  position: absolute; /*Позиционирование элемента, другие элементы занимают его позицию, как будто его там и не было.*/
-  inset: 0; /*одновременное смещение  элемента со всех четырёх сторон*/
-  background: rgba(0, 0, 0, 0.6); /*Цвет фона*/
-  z-index: 1; /*Порядок слоя*/
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
-.cover__title { 
-  position: relative; 
-  z-index: 2; 
-  display: flex; 
-  flex-direction: column; 
-  gap: 6px; 
-  color: #fff; 
-  font-weight: bold; 
-  font-size: 100px; 
-  line-height: 1.15; 
-  text-transform: uppercase; 
+/*Текст в баннере*/
+.cover__title {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 1.15;
+  text-transform: uppercase;
 }
 
 /*ОНО*/
 .aligned-text_left {
-  display: block; /*Меняет на блочный элемент, позволяет каждое слово начинать с новой строки*/
-  letter-spacing: 0.3em; /*Интервал между буквами*/
+  display: block;
+  letter-spacing: 0.3em;
 }
 
 /*ТЕБЕ*/
 .aligned-text_center {
   display: block;
   letter-spacing: 0.3em;
-  text-align: center; /*Текс по центру внутри своего блока*/
-  margin-right: -30px; /*Внешний отступ справа*/
-  margin-top: 14px; /*Внешний отступ сверху*/
+  text-align: center;
+  margin-right: -30px;
+  margin-top: 14px;
 }
 
 /*НАДО*/
@@ -125,7 +126,7 @@
 }
 
 .letter-spacing-extended {
-  letter-spacing: 0.6em; /*Межбуквенный интервал*/
+  letter-spacing: 0.6em;
 }
 
 .no-letter-spacing {
@@ -137,30 +138,30 @@
   position: relative;
   z-index: 2;
   display: flex;
-  justify-content: end; /*Выравнивает флекс элементы по горизонтали к правой части.*/
-  align-items: center; /*Выравнивание флекс элементы по вертикали по центру*/
-  gap: 102px; /*Отступ между флекс элементами*/
-  margin-top: 105px; /*Оттуп сверху*/
+  justify-content: end;
+  align-items: center;
+  gap: 102px;
+  margin-top: 105px;
 }
 
 .cover__description-text {
   color: #fff;
   font-size: 22px;
-  line-height: 1.27; 
-  text-transform: uppercase; 
-  word-spacing: 18px; 
-  margin-right: 6px; 
+  line-height: 1.27;
+  text-transform: uppercase;
+  word-spacing: 18px;
+  margin-right: 6px;
 }
 
 /* Кнопка ставки */
 .bet-button {
-  border: 1px solid #fff; /*Обводка*/
+  border: 1px solid #fff;
   padding: 12px 32px;
   color: #fff;
   font-size: 22px;
   text-transform: uppercase;
-  background: transparent; /*Прозрачнй фон*/
-  cursor: pointer; /*Меняет курсор с стрелки на указатель*/
+  background: transparent;
+  cursor: pointer;
 }
 
 /*Заголовок лотов*/
@@ -174,44 +175,44 @@
 /*Карточки лотов*/
 .lots__card-list {
   display: flex;
-  flex-wrap: nowrap; /*Запрет перенос флекс элементов на новую строку*/
+  flex-wrap: nowrap;
   gap: 25px;
-  list-style: none; /*Убирает маркеры списка*/
+  list-style: none;
   margin-bottom: 30px;
-  justify-content: space-between; /*Распределяет свободное пространство по горизонтали между карточками*/
-  align-items: stretch; /*Растягивает все карточки по вертикали на одинаковую высоту (равную высоте самой высокой карточки)*/
+  justify-content: space-between;
+  align-items: stretch;
 }
 
 /*Сами карточки*/
 .lots__card-list-item {
-  flex: 1; /*Сокращение для: flex-grow: 1; flex-shrink: 1; flex-basis: 0%; - Позвоялет растягиватсья элементу, чтобы заполнить все пространство в контейнере*/
-  min-width: 0; /*Позволяет элементу сновится уже, чем его контент*/
-  width: auto; /*Автоматическая ширина*/
-  min-height: 450px; /*Минимальная высота для карточек*/
+  flex: 1;
+  min-width: 0;
+  width: auto;
+  min-height: 450px;
 }
 
 /*Карточка*/
 .card-link {
-  display: block; /*Блочный элемент - занять всю ширину и высоту родителя*/
-  height: 100%; /*Вся высота родителя*/
-  text-decoration: none; /*Убирает подчеркивание*/
+  display: block;
+  height: 100%;
+  text-decoration: none;
 }
 
 /* Общие стили карточек */
 .card {
-  position: relative; /*Можно позиционировать относительно своего исходного места*/
-  display: flex; 
-  flex-direction: column; /*Дочерние элементы в колонну*/
-  justify-content: space-between; /*Распределенеи свободного пространства внутри карточек (Заголовок к верху, текст к низу)*/
-  height: 100%; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   padding: 48px 40px 82px;
   color: #fff;
-  background: center/cover no-repeat; /*Фон: по центру, заполнить блок, запрет повтора*/
+  background: center/cover no-repeat;
 }
 
 /* Фоны карточек */
 .card_type_film {
-  background-image: url("../images/card-lot-01.jpg"); /*Фоновое изображение*/
+  background-image: url("../images/card-lot-01.jpg");
 }
 
 .card_type_book {
@@ -228,7 +229,7 @@
   z-index: 2;
   font-size: 22px;
   line-height: 1.2;
-  text-decoration: underline; /*Подчеркивание*/
+  text-decoration: underline;
   text-transform: uppercase;
 }
 
@@ -246,27 +247,27 @@
 .lots__look-more-link {
   margin-left: 40px;
   font-size: 20px;
-  text-underline-offset: 5px; /*Смещение подчеркивания*/
+  text-underline-offset: 5px;
 }
 
 /*Общие стили для обоих колонок*/
 .about__column {
   display: flex;
   flex-direction: column;
-  align-items: center; /*Выравнивание дочерних элементов по горизонтали по центру*/
+  align-items: center;
   padding: 0px 10px;
   margin-right: 5px;
 }
 
 /*Логотип*/
 .about__logo {
-  display: flex; /*Чтобы центрировать логотип внутри кргуа*/
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
   align-items: center;
   width: 240px;
   height: 240px;
-  border-radius: 50%; /*Скгугляем углы элемента*/
-  background: #000; /*Заливка круга*/
+  border-radius: 50%;
+  background: #000;
 }
 
 /*Логотип (фото)*/
@@ -276,19 +277,19 @@
 
 /*Заголовок Об аукционе*/
 .about__title {
-  margin: 100px 0; /*Отсуп сверху и снизу*/
+  margin: 100px 0;
   font-size: 40px;
   text-transform: uppercase;
-  align-self: flex-start; /*Чтобы заголовок был выровнен по левому краю, а не по центру колонки*/
+  align-self: flex-start;
 }
 
 /*Текст*/
 .about__text {
   display: flex;
-  flex-direction: column; /*Абзацы вертикально*/
+  flex-direction: column;
   gap: 25px;
   font-size: 20px;
-  line-height: 1.2; /*Интервал между строк */
+  line-height: 1.2;
   padding: 1px 0px 0px 0px;
 }
 
@@ -299,8 +300,8 @@
 
 /*Список меню*/
 .footer__menu-list {
-  list-style: none; /*Убрать маркеры*/
-  text-align: center; /*Текст по центру*/
+  list-style: none;
+  text-align: center;
 }
 
 /*Ссылки в меню*/
@@ -311,7 +312,7 @@
 
 /*Активная ссылка*/
 .footer__menu-link_active {
-  text-decoration: none; /*Убрать подчекнивание с активной ссылки*/
+  text-decoration: none;
 }
 
 /*Колонка иконок соц сетей*/
