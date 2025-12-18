@@ -86,18 +86,17 @@
   z-index: 1; /*Порядок слоя*/
 }
 
-/*Текст в баннере*/
-.cover__title {
+.cover__title { 
   position: relative; 
-  z-index: 2; /*Порядок слоя*/
-  display: flex; /*Дисплей флекс - расположение объектов в строку*/
-  flex-direction: column; /*Расположение дочерних элементов в колонку*/
-  gap: 6px; /*Промежуток между словами*/
-  color: #fff; /*Цвет текста*/
-  font-weight: bold; /*Жирный цвет*/
-  font-size: 100px; /*Размер шрифта*/
-  line-height: 1.15; /*Интервал между строк?*/
-  text-transform: uppercase; /*Верхний регистр*/
+  z-index: 2; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 6px; 
+  color: #fff; 
+  font-weight: bold; 
+  font-size: 100px; 
+  line-height: 1.15; 
+  text-transform: uppercase; 
 }
 
 /*ОНО*/
@@ -144,14 +143,13 @@
   margin-top: 105px; /*Оттуп сверху*/
 }
 
-/*Инфа об аукционе*/
 .cover__description-text {
   color: #fff;
   font-size: 22px;
-  line-height: 1.27; /*Интервал между строк или высота строки*/
+  line-height: 1.27; 
   text-transform: uppercase; 
-  word-spacing: 18px; /*Отступ между словами*/
-  margin-right: 6px; /*Внешний отсуп справа*/
+  word-spacing: 18px; 
+  margin-right: 6px; 
 }
 
 /* Кнопка ставки */
